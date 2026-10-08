@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="IND_PIC1/logo1.png" />
+    <title>PUJO CONNECT(PRESENTED BY BCA DEPARTMENT)</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Arimo:ital,wght@0,400..700;1,400..700&family=Audiowide&family=Bad+Script&family=Bangers&family=Berkshire+Swash&family=Betania+Patmos&family=Black+Ops+One&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Bruno+Ace+SC&family=Cardo:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Cookie&family=Courgette&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Croissant+One&family=Dancing+Script:wght@400..700&family=Delius&family=Elsie:wght@400;900&family=Felipa&family=Gorditas:wght@400;700&family=Grand+Hotel&family=Gravitas+One&family=Isometra&family=Italianno&family=Kaushan+Script&family=Kavoon&family=Kelly+Slab&family=Limelight&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Original+Surfer&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&family=Playwrite+BR+Guides&family=Playwrite+NZ+Basic:wght@100..400&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Sacramento&family=Smooch+Sans:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&family=Tagesschrift&family=Vampiro+One&family=Viga&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #dff6ff, #eee5ff, #fff0f7);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .course {
+        display: inline-block;
+        padding: 8px 22px;
+        border-radius: 20px;
+        color: #250fc9;
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-family: "Kelly Slab", sans-serif;
+        cursor: pointer;
+      }
+      .course:hover {
+        transform: translateY(5px);
+        transition: 0.5s;
+      }
+      h1 {
+        font-size: 42px;
+        color: #29234d;
+
+        margin-bottom: 10px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 900;
+      }
+
+      .subtitle {
+        color: #4c0606;
+        font-size: 16px;
+        margin-bottom: 40px;
+        font-family: "Aboreto", system-ui;
+        font-weight: 500px;
+      }
+
+      .groups {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+
+      .group-card {
+        background: rgba(255, 255, 255, 0.92);
+        padding: 30px;
+        border-radius: 22px;
+        border: 1px solid #e7e2ff;
+        box-shadow: 0 10px 30px rgba(80, 60, 150, 0.12);
+        transition: 0.4s;
+        text-align: center;
+      }
+
+      .group-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 35px rgba(80, 60, 150, 0.22);
+      }
+
+      .group-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: linear-gradient(#6c5ce7, #a78bfa);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .group-title {
+        color: #5142c5;
+        font-size: 25px;
+        margin-bottom: 8px;
+      }
+
+      .line {
+        width: 50px;
+        height: 3px;
+        margin: 0 auto 22px;
+        background: #8b7cf6;
+        border-radius: 10px;
+      }
+
+      .member {
+        position: relative;
+        padding: 15px;
+        margin: 10px 0;
+        background: #f8f7ff;
+        border-radius: 12px;
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+        transition: 0.3s;
+        font-family: "Texturina", serif;
+        font-size: 20px;
+      }
+
+      .member:hover {
+        background: linear-gradient(skyblue, white);
+        transform: translateX(7px);
+      }
+
+      .number {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #e8e4ff;
+        color: #5a4bcf;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Castoro Titling", serif;
+      }
+
+      .footer {
+        margin-top: 35px;
+        color: #888;
+        font-size: 14px;
+      }
+
+      @media (max-width: 700px) {
+        .groups {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="course">BCA</div>
+
+      <h1>Our Groups</h1>
+
+      <p class="subtitle">Meet the students behind our project</p>
+
+      <div class="groups">
+        <!-- Group A -->
+        <div class="group-card">
+          <div class="group-icon">A</div>
+
+          <h2 class="group-title">Group - A (1st Sem)</h2>
+
+          <div class="line"></div>
+
+          <div class="member">
+            <span class="number">01</span>
+            Sayantan Bera
+          </div>
+
+          <div class="member">
+            <span class="number">02</span>
+            Soumitra Maity
+          </div>
+
+          <div class="member">
+            <span class="number">03</span>
+            Smaranik Bar
+          </div>
+          <div class="member">
+            <span class="number">04</span>
+            Sk Zidan Ali
+          </div>
+          <div class="member">
+            <span class="number">05</span>
+            Puja Sing
+          </div>
+          <div class="member">
+            <span class="number">06</span>
+            Imankalyan Purkait
+          </div>
+        </div>
+
+        <!-- Group B -->
+        <div class="group-card">
+          <div class="group-icon">B</div>
+
+          <h2 class="group-title">Group - B(1st Sem)</h2>
+
+          <div class="line"></div>
+
+          <div class="member">
+            <span class="number">01</span>
+            Shyamali Maity
+          </div>
+
+          <div class="member">
+            <span class="number">02</span>
+            Namrata Mandal
+          </div>
+
+          <div class="member">
+            <span class="number">03</span>
+            Arpita Maity
+          </div>
+          <div class="member">
+            <span class="number">04</span>
+            Alo Santra
+          </div>
+          <div class="member">
+            <span class="number">05</span>
+            Soumitra Sardar
+          </div>
+          <div class="member">
+            <span class="number">06</span>
+            Bipul Mandal
+          </div>
+        </div>
+
+        <!-- Group C -->
+        <div class="group-card">
+          <div class="group-icon">C</div>
+
+          <h2 class="group-title">Group - C(3rd Sem)</h2>
+
+          <div class="line"></div>
+
+          <div class="member">
+            <span class="number">01</span>
+            Arbina Khatun
+          </div>
+
+          <div class="member">
+            <span class="number">02</span>
+            Amrita Pandit
+          </div>
+
+          <div class="member">
+            <span class="number">03</span>
+            Shreya Pradhan
+          </div>
+
+          <div class="member">
+            <span class="number">04</span>
+            Aypeek Bhunia
+          </div>
+
+          <div class="member">
+            <span class="number">05</span>
+            Soumyadip Maity
+          </div>
+
+          <div class="member">
+            <span class="number">06</span>
+            Sayan Das
+          </div>
+        </div>
+
+        <!-- Group D -->
+        <div class="group-card">
+          <div class="group-icon">D</div>
+
+          <h2 class="group-title">Group - D(3rd Sem)</h2>
+
+          <div class="line"></div>
+
+          <div class="member">
+            <span class="number">01</span>
+            Sudipta Mandal
+          </div>
+
+          <div class="member">
+            <span class="number">02</span>
+            Debu Das
+          </div>
+
+          <div class="member">
+            <span class="number">03</span>
+            Parashmita Das
+          </div>
+
+          <div class="member">
+            <span class="number">04</span>
+            Piyali Dalai
+          </div>
+
+          <div class="member">
+            <span class="number">05</span>
+            Ayan De
+          </div>
+
+          <div class="member">
+            <span class="number">06</span>
+            Sampriti Das
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">BCA Department • Student Project</div>
+    </div>
+  </body>
+</html>

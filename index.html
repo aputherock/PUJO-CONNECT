@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="IND_PIC1/logo1.png" />
+
+    <title>PUJO CONNECT(PRESENTED BY BCA DEPARTMENT)</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Metamorphous&family=Oooh+Baby&family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --red: #9f1239;
+        --deep-red: #7f1d1d;
+        --gold: #f50f0b;
+        --soft-gold: #ca961c;
+        --glass: rgba(255, 255, 255, 0.42);
+        --glass-border: rgba(255, 255, 255, 0.7);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: clamp(14px, 3vw, 40px);
+        font-family: "Saira", sans-serif;
+        background:
+          radial-gradient(
+            circle at 15% 15%,
+            rgba(220, 38, 38, 0.22),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 85% 80%,
+            rgba(245, 158, 11, 0.24),
+            transparent 32%
+          ),
+          linear-gradient(
+            135deg,
+            #fff1f2 0%,
+            #ffe4e6 35%,
+            #fef3c7 68%,
+            #dbeafe 100%
+          );
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        width: 35vmax;
+        height: 35vmax;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.22;
+        pointer-events: none;
+        animation: floatBlob 9s ease-in-out infinite alternate;
+      }
+
+      body::before {
+        top: -18vmax;
+        left: -15vmax;
+        background: #ef4444;
+      }
+
+      body::after {
+        right: -16vmax;
+        bottom: -18vmax;
+        background: #f59e0b;
+        animation-delay: -4s;
+      }
+
+      .container {
+        width: min(100%, 1050px);
+        min-height: min(720px, calc(100svh - 40px));
+        padding: clamp(24px, 4vw, 52px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(16px, 2.5vw, 25px);
+        border-radius: clamp(20px, 3vw, 32px);
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        box-shadow:
+          0 25px 60px rgba(0, 0, 0, 0.18),
+          inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        transition:
+          transform 0.45s ease,
+          box-shadow 0.45s ease;
+        animation: containerIn 0.8s ease both;
+      }
+
+      .container:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 35px 85px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .container::before,
+      .container::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .container::before {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        left: -120px;
+        background: rgba(220, 38, 38, 0.13);
+        filter: blur(3px);
+      }
+
+      .container::after {
+        width: 360px;
+        height: 360px;
+        bottom: -190px;
+        right: -120px;
+        background: rgba(245, 158, 11, 0.16);
+        filter: blur(3px);
+      }
+
+      marquee {
+        width: 100%;
+        max-width: 900px;
+        font-family: "Metamorphous", serif;
+        color: rgb(213, 113, 18);
+        font-size: clamp(18px, 3vw, 30px);
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        font-style: italic;
+        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.75);
+      }
+
+      h3 {
+        font-size: clamp(18px, 2.6vw, 25px);
+        letter-spacing: clamp(1px, 0.35vw, 3px);
+        text-align: center;
+        font-family: "Roboto Slab", serif;
+        font-style: italic;
+        color: #833602;
+        text-shadow: 0 2px 12px rgba(255, 255, 255, 0.65);
+        transition:
+          letter-spacing 0.35s ease,
+          transform 0.35s ease;
+      }
+
+      h3:hover {
+        letter-spacing: 5px;
+        transform: scale(1.03);
+      }
+
+      .N {
+        width: min(100%, 500px);
+        padding: clamp(8px, 1.3vw, 12px);
+        border-radius: clamp(18px, 2.5vw, 26px);
+        background: rgba(0, 0, 0, 0.914);
+        box-shadow:
+          rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        transition:
+          transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.5s ease;
+        position: relative;
+        z-index: 2;
+      }
+
+      .N:hover {
+        transform: translateY(-8px) scale(1.025) rotate(0.5deg);
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+      }
+
+      .N img {
+        width: 100%;
+        height: clamp(220px, 36vw, 360px);
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        border-radius: clamp(13px, 1.8vw, 20px);
+        border: 4px solid white;
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+      }
+
+      .N:hover img {
+        transform: scale(1.025);
+        filter: saturate(1.08) contrast(1.03);
+      }
+
+      .x {
+        font-family: "Roboto Slab", serif;
+        font-size: clamp(15px, 2vw, 21px);
+        letter-spacing: clamp(0.7px, 0.2vw, 2px);
+        font-weight: bold;
+        color: rgba(81, 57, 4, 0.78);
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        transition:
+          color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .x:hover {
+        color: var(--red);
+        transform: translateY(-2px);
+      }
+
+      p {
+        width: min(100%, 850px);
+        font-family: "Playwrite NZ Basic", cursive;
+        font-size: clamp(13px, 1.8vw, 18px);
+        color: var(--deep-red);
+        text-align: center;
+        line-height: 1.7;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.3s ease;
+      }
+
+      p:hover {
+        transform: scale(1.01);
+      }
+
+      button {
+        box-shadow:
+          rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        width: min(220px, 75vw);
+        min-height: 44px;
+        padding: 10px 24px;
+        border: 0;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #adf288, #faf7f0);
+        color: rgb(183, 24, 24);
+        font-family: "Roboto Slab", serif;
+        font-size: clamp(14px, 1.8vw, 16px);
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: 2px;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(145, 64, 0, 0.18);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          color 0.3s ease,
+          letter-spacing 0.3s ease;
+      }
+
+      button:hover {
+        border: 2px solid red;
+        color: #480101;
+        letter-spacing: 3px;
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 16px 32px rgba(145, 64, 0, 0.28);
+      }
+
+      button:active {
+        transform: translateY(-1px) scale(0.98);
+      }
+
+      button:focus-visible {
+        outline: 3px solid rgba(159, 18, 57, 0.35);
+        outline-offset: 4px;
+      }
+      button a {
+        text-decoration: none;
+      }
+
+      @keyframes containerIn {
+        from {
+          opacity: 0;
+          transform: translateY(24px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes floatBlob {
+        from {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        to {
+          transform: translate3d(25px, 18px, 0) scale(1.08);
+        }
+      }
+
+      /* Tablet */
+      @media (max-width: 768px) {
+        body {
+          align-items: flex-start;
+          padding: 18px 12px;
+        }
+
+        .container {
+          width: 100%;
+          min-height: auto;
+          padding: 28px 18px 32px;
+          gap: 18px;
+          border-radius: 24px;
+        }
+
+        marquee {
+          font-size: clamp(16px, 4vw, 22px);
+          color: red;
+        }
+
+        .N {
+          width: min(100%, 430px);
+        }
+
+        .N img {
+          height: clamp(230px, 60vw, 320px);
+        }
+
+        p {
+          line-height: 1.6;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 480px) {
+        body {
+          padding: 10px 8px;
+        }
+
+        .container {
+          padding: 22px 12px 26px;
+          gap: 15px;
+          border-radius: 20px;
+        }
+
+        marquee {
+          font-size: 15px;
+          scrollamount: 7;
+        }
+
+        h3 {
+          font-size: 17px;
+          letter-spacing: 1.2px;
+        }
+
+        .N {
+          padding: 7px;
+          border-radius: 18px;
+        }
+
+        .N img {
+          height: 250px;
+          border-width: 3px;
+          border-radius: 14px;
+        }
+
+        .x {
+          font-size: 14px;
+          line-height: 1.5;
+          letter-spacing: 0.5px;
+        }
+
+        p {
+          padding: 0 3px;
+          font-size: 12.5px;
+          line-height: 1.65;
+        }
+
+        button {
+          width: min(200px, 80vw);
+          min-height: 42px;
+          font-size: 13px;
+        }
+
+        /* Reduce hover movement on touch-sized screens */
+        .container:hover,
+        .N:hover {
+          transform: none;
+        }
+
+        .N:hover img {
+          transform: none;
+        }
+      }
+
+      /* Very small phones */
+      @media (max-width: 360px) {
+        .container {
+          padding: 18px 9px 22px;
+        }
+
+        marquee {
+          font-size: 13px;
+        }
+
+        h3 {
+          font-size: 15px;
+        }
+
+        .N img {
+          height: 220px;
+        }
+
+        .x {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 11.5px;
+        }
+      }
+
+      /* Respect users who prefer less motion */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <marquee behavior="scroll" direction="left" scrollamount="10">
+        WELCOME TO CARAVEL TECHNICAL & MANAGEMENT COLLEGE(CTMC)
+      </marquee>
+
+      <h3>DURGA PUJA 2K26</h3>
+
+      <div class="N">
+        <img
+          src="IND_PIC1/logo.png"
+          alt="Durga Puja BCA celebration banner"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="x">CREATED BY BCA 1st SEM AND 3rd SEM</div>
+
+      <p>BCA-এর ব্যস্ততা ভুলে, মায়ের পুজোয় হারিয়ে যাই আনন্দের রঙে। 🌸</p>
+      <p>
+        A beautiful collaboration between BCA 1st & 3rd Semester —
+        <br />
+        two semesters, one team, one vision. Together, we turned our ideas into
+        something worth remembering. ❤️🌺
+      </p>
+
+      <button>
+        <a href="puja.html" target="_blank">EXPLORE</a>
+      </button>
+    </div>
+  </body>
+</html>

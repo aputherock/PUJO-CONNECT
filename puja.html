@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="IND_PIC1/logo1.png" />
+    <title>PUJO CONNECT(PRESENTED BY BCA DEPARTMENT)</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Audiowide&family=Cinzel:wght@400;700;900&family=Kavoon&family=Merienda:wght@300;700&family=Original+Surfer&family=Protest+Revolution&family=Croissant+One&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: #eaf4ef;
+        font-family: "Arimo", sans-serif;
+
+        padding-bottom: 85px;
+      }
+
+      .main {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .head1 {
+        width: 100%;
+        min-height: 60px;
+
+        padding: 12px 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        background: linear-gradient(135deg, #79ed91, #14a3c7);
+
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0 10px 25px -10px,
+          rgba(0, 0, 0, 0.3) 0 10px 25px -15px;
+      }
+
+      .text1 {
+        letter-spacing: 7px;
+        font-size: clamp(20px, 3vw, 28px);
+
+        font-family: "Cinzel", serif;
+
+        color: white;
+
+        white-space: nowrap;
+      }
+
+      .ul1 {
+        display: flex;
+        align-items: center;
+
+        gap: clamp(12px, 3vw, 28px);
+
+        list-style: none;
+
+        font-family: "Original Surfer", sans-serif;
+      }
+
+      .ul1 a {
+        text-decoration: none;
+
+        color: white;
+
+        font-size: clamp(13px, 2vw, 17px);
+
+        transition: 0.3s ease;
+      }
+
+      .ul1 a:hover {
+        color: #fff5b7;
+      }
+
+      .Sliders {
+        width: 100%;
+
+        height: clamp(220px, 50vw, 500px);
+
+        overflow: hidden;
+      }
+
+      .Slides {
+        width: 900%;
+        height: 100%;
+
+        display: flex;
+
+        animation: Slides 27s infinite;
+      }
+
+      .Slide {
+        flex: 0 0 11.111111%;
+
+        width: 11.111111%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Slide img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+      }
+
+      @keyframes Slides {
+        0%,
+        8% {
+          transform: translateX(0);
+        }
+
+        11%,
+        19% {
+          transform: translateX(-11.111111%);
+        }
+
+        22%,
+        30% {
+          transform: translateX(-22.222222%);
+        }
+
+        33%,
+        41% {
+          transform: translateX(-33.333333%);
+        }
+
+        44%,
+        52% {
+          transform: translateX(-44.444444%);
+        }
+
+        55%,
+        63% {
+          transform: translateX(-55.555555%);
+        }
+
+        66%,
+        74% {
+          transform: translateX(-66.666666%);
+        }
+
+        77%,
+        85% {
+          transform: translateX(-77.777777%);
+        }
+
+        88%,
+        96% {
+          transform: translateX(-88.888888%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .section {
+        width: 100%;
+
+        padding: 20px 16px 0;
+      }
+
+      .section-heading {
+        max-width: 850px;
+
+        margin: 10px auto 35px;
+
+        text-align: center;
+      }
+
+      .section-heading small {
+        color: #d88a18;
+
+        font-size: clamp(10px, 2vw, 13px);
+
+        font-weight: 700;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+      }
+
+      .section-heading h2 {
+        margin-top: 10px;
+
+        font-family: "Cinzel", serif;
+
+        font-size: clamp(28px, 5vw, 45px);
+
+        color: #145544;
+      }
+
+      .section-heading p {
+        max-width: 650px;
+
+        margin: 12px auto 0;
+
+        padding: 0 8px;
+
+        color: #63756f;
+
+        line-height: 1.7;
+
+        font-size: clamp(14px, 2vw, 16px);
+      }
+
+      .midimg {
+        width: min(350px, 85vw);
+
+        margin: 25px auto 10px;
+      }
+
+      .mid {
+        width: 100%;
+
+        height: auto;
+
+        max-height: 250px;
+
+        object-fit: contain;
+
+        display: block;
+
+        border-radius: 20px;
+
+        transition: 0.5s ease;
+      }
+
+      .mid:hover {
+        cursor: pointer;
+
+        transform: scale(1.04);
+      }
+
+      .section-heading .sir {
+        margin-top: 12px;
+
+        font-size: clamp(16px, 3vw, 20px);
+
+        font-family: "Kavoon", serif;
+
+        letter-spacing: 2px;
+
+        color: #3f000f;
+      }
+
+      .con {
+        width: 100%;
+
+        overflow: visible;
+      }
+
+      .box {
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 5px auto 30px;
+
+        padding: 0 8px;
+
+        display: grid;
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 20px;
+      }
+
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 12px;
+
+        border-radius: 10px;
+
+        background-color: whitesmoke;
+
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+
+        overflow: hidden;
+      }
+
+      .students {
+        width: 100%;
+
+        height: clamp(150px, 18vw, 190px);
+
+        display: block;
+
+        object-fit: cover;
+
+        border-radius: 8px;
+
+        transition: transform 0.5s ease;
+      }
+
+      .students:hover {
+        transform: scale(1.05);
+      }
+
+      h3.info {
+        margin-top: 10px;
+
+        padding: 8px 5px;
+
+        border-radius: 5px;
+
+        color: rgb(0, 0, 0);
+
+        background: linear-gradient(yellow,rgb(166, 239, 166));
+
+        font-family: "Cinzel", serif;
+
+        font-size: clamp(12px, 1.5vw, 19px);
+
+        text-align: center;
+      }
+
+      .infolist {
+        display: grid;
+
+        margin-top: 10px;
+
+        padding: 0 5px;
+
+        justify-content: center;
+
+        gap: 6px;
+
+        text-align: center;
+      }
+
+      .infotext1 {
+        color: rgb(222, 11, 201);
+
+        font-family: "Merienda", cursive;
+
+        font-size: clamp(13px, 1.6vw, 17px);
+      }
+
+      .infotext2 {
+        color: rgb(19, 37, 126);
+
+        font-size: clamp(12px, 1.5vw, 16px);
+
+        font-family: "Croissant One", serif;
+
+        overflow-wrap: anywhere;
+      }
+
+      .infotext3 {
+        font-family: "Protest Revolution", sans-serif;
+
+        color: #a91640;
+
+        font-size: clamp(12px, 1.5vw, 15px);
+
+        overflow-wrap: anywhere;
+      }
+
+    .btn {
+    width: min(320px, 90%);
+    margin: 10px auto 30px;
+
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    padding: 13px 20px;
+    display: block;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #c2ead9;
+
+    font-family: "Audiowide", sans-serif;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.4s ease;
+
+    text-align: center;
+    text-decoration: none;
+
+    letter-spacing: 1.5px;
+    color: black;
+}
+
+      .btn:hover {
+        background: #7710e4;
+
+        color: white;
+        border: 2px solid rgb(255, 242, 0);
+        transform: translateY(-3px);
+      }
+
+      .foot {
+        position: fixed;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 15px 10px;
+
+        display: grid;
+
+        place-items: center;
+
+        gap: 5px;
+
+        text-align: center;
+
+        z-index: 9999;
+
+        letter-spacing: 2px;
+
+        color: #dcbf8a;
+
+        background: linear-gradient(135deg, #073640, #0b5148);
+
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .text {
+        font-size: clamp(12px, 2vw, 16px);
+      }
+
+      .copyright {
+        color: #aac1bb;
+
+        font-size: clamp(10px, 2vw, 14px);
+
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 900px) {
+        .box {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+
+          max-width: 720px;
+        }
+
+        .students {
+          height: clamp(170px, 30vw, 220px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding-bottom: 95px;
+        }
+
+        .head1 {
+          min-height: 58px;
+
+          padding: 10px 14px;
+
+          gap: 10px;
+        }
+
+        .text1 {
+          letter-spacing: 4px;
+        }
+
+        .ul1 {
+          gap: 10px;
+        }
+
+        .ul1 a {
+          font-size: 12px;
+        }
+
+        .Sliders {
+          height: 240px;
+        }
+
+        .section {
+          padding: 15px 10px 0;
+        }
+
+        .section-heading {
+          margin-bottom: 25px;
+        }
+
+        .section-heading p {
+          line-height: 1.55;
+        }
+
+        .midimg {
+          width: min(320px, 92vw);
+        }
+
+        .box {
+          grid-template-columns: 1fr;
+
+          max-width: 420px;
+
+          gap: 18px;
+
+          padding: 0 5px;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+          padding: 10px;
+        }
+
+        .students {
+          height: 210px;
+        }
+
+        .btn {
+          margin-top: 5px;
+        }
+
+        .foot {
+          min-height: 85px;
+
+          padding: 12px 8px;
+
+          letter-spacing: 1px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .head1 {
+          flex-direction: column;
+
+          justify-content: center;
+
+          padding: 10px;
+        }
+
+        .ul1 {
+          gap: 18px;
+        }
+
+        .Sliders {
+          height: 210px;
+        }
+
+        .students {
+          height: 190px;
+        }
+
+        .foot {
+          min-height: 90px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <header class="head1">
+        <div class="text1">BCA</div>
+
+        <ul class="ul1">
+          <li>
+            <a href="about.html" target="_blank"> About </a>
+          </li>
+
+          <li>
+            <a href="sir.html" target="_blank"> Mentorship </a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="Sliders">
+        <div class="Slides">
+          <div class="Slide">
+            <img src="2nd_page/pic9.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic18.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic12.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic15.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic16.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic14.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic8.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic10.png" alt="Puja Image" />
+          </div>
+
+          <div class="Slide">
+            <img src="2nd_page/pic17.png" alt="Puja Image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="groups">
+        <div class="section-heading">
+          <small> BCA Student Creativity </small>
+
+          <h2>Our Groups</h2>
+
+          <p>
+            Meet the talented students of our BCA Department, bringing
+            creativity, teamwork, technology, and enthusiasm together to
+            celebrate Durga Puja.
+          </p>
+
+          <div class="midimg">
+            <img class="mid" src="2nd_page/mid.png" alt="BCA Students" />
+          </div>
+
+          <p class="sir">Guided By Mr. Apurba Goswami</p>
+        </div>
+
+        <div class="con">
+          <div class="box">
+            <div class="box1">
+              <div class="img">
+                <img src="2nd_page/pic4.png" alt="Group A" class="students" />
+              </div>
+
+              <h3 class="info">Group-A</h3>
+
+              <div class="infolist">
+                <div class="infotext1">Junior</div>
+
+                <div class="infotext2">Durga Sktch</div>
+
+                <div class="infotext3">using Artpaper,color</div>
+              </div>
+            </div>
+
+            <div class="box2">
+              <div class="img">
+                <img src="2nd_page/pic7.png" alt="Group B" class="students" />
+              </div>
+
+              <h3 class="info">Group-B</h3>
+
+              <div class="infolist">
+                <div class="infotext1">Junior</div>
+
+                <div class="infotext2">Handmade Craft</div>
+
+                <div class="infotext3">using Colorpaper</div>
+              </div>
+            </div>
+
+            <div class="box3">
+              <div class="img">
+                <img src="2nd_page/pic6.png" alt="Group C" class="students" />
+              </div>
+
+              <h3 class="info">Group-C</h3>
+
+              <div class="infolist">
+                <div class="infotext1">Senior</div>
+
+                <div class="infotext2">Developed Web Site</div>
+
+                <div class="infotext3">using HTML,CSS</div>
+              </div>
+            </div>
+
+            <div class="box4">
+              <div class="img">
+                <img src="2nd_page/pic5.png" alt="Group D" class="students" />
+              </div>
+
+              <h3 class="info">Group-D</h3>
+
+              <div class="infolist">
+                <div class="infotext1">Senior</div>
+
+                <div class="infotext2">Developed Web Site</div>
+
+                <div class="infotext3">using HTML,CSS</div>
+              </div>
+            </div>
+
+            <a href="end.html" target="_blank" class="btn">
+              Explore Memories
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="foot">
+      <div class="text">Developed by BCA DEPARTMENT</div>
+
+      <div class="copyright">
+        © 2026 BCA Department • Celebrating Creativity & Technology
+      </div>
+    </footer>
+  </body>
+</html>
+```

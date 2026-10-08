@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="IND_PIC1/logo1.png" />
+    <title>PUJO CONNECT(PRESENTED BY BCA DEPARTMENT)</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Bitcount+Ink:wght@100..900&family=Instrument+Serif:ital@0;1&family=Rancho&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Abel&family=Anta&family=Audiowide&family=BBH+Hegarty&family=Bangers&family=Berkshire+Swash&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Calligraffitti&family=Caveat+Brush&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Edu+SA+Beginner:wght@400..700&family=Edu+SA+Hand:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Geom:ital,wght@0,300..900;1,300..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Handlee&family=Indie+Flower&family=Kalnia:wght@100..700&family=Kaushan+Script&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Marcellus+SC&family=Metal+Mania&family=Michroma&family=Miltonian&family=Nothing+You+Could+Do&family=Oleo+Script:wght@400;700&family=Oooh+Baby&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Original+Surfer&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Play:wght@400;700&family=Playwrite+NO:wght@100..400&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Righteous&family=Seaweed+Script&family=Viga&family=WDXL+Lubrifont+TC&family=Yuyu&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --pink: #d31172;
+        --deep: #9d0755;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: clamp(10px, 3vw, 35px);
+        text-align: center;
+        color: #1e293b;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 10% 10%, #d3117226, transparent 30%),
+          radial-gradient(circle at 90% 85%, #14b8a633, transparent 32%),
+          linear-gradient(135deg, #e0f2fe, #f8fafc);
+      }
+      body:before,
+      body:after {
+        content: "";
+        position: fixed;
+        width: 32vmax;
+        height: 32vmax;
+        border-radius: 50%;
+        filter: blur(75px);
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: -1;
+        animation: float 9s ease-in-out infinite alternate;
+      }
+      body:before {
+        top: -18vmax;
+        left: -14vmax;
+        background: #f472b6;
+      }
+      body:after {
+        right: -15vmax;
+        bottom: -18vmax;
+        background: #2dd4bf;
+        animation-delay: -4s;
+      }
+      .main {
+        width: min(100%, 1100px);
+        min-height: calc(100vh - 70px);
+        margin: auto;
+        padding: clamp(22px, 4vw, 45px);
+        border-radius: clamp(20px, 3vw, 32px);
+        background: #ffffff61;
+        border: 1px solid #ffffffb8;
+        box-shadow:
+          0 25px 65px #00000026,
+          inset 0 1px 0 #ffffffcc;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        transition: 0.45s ease;
+        animation: pageIn 0.8s ease both;
+      }
+      .main:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 35px 80px #00000036;
+      }
+      .newp {
+        font-family: "Abel", sans-serif;
+        color: rgb(23, 2, 10);
+        font-size: 14px;
+        text-align: center;
+      }
+      h3 {
+        margin-bottom: clamp(18px, 3vw, 28px);
+        font-family: "Bitcount Ink", system-ui;
+        font-size: clamp(24px, 4vw, 38px);
+        color: var(--pink);
+        text-transform: uppercase;
+        letter-spacing: clamp(1px, 0.35vw, 3px);
+        text-shadow: 0 4px 15px #d3117229;
+        transition: 0.35s ease;
+      }
+      h3:hover {
+        transform: scale(1.025);
+        letter-spacing: 5px;
+      }
+      .img {
+        width: min(100%, 920px);
+        margin: auto;
+        padding: clamp(7px, 1.2vw, 11px);
+        border-radius: 24px;
+        background: #ffffff7d;
+        box-shadow: 0 15px 35px #00000021;
+        overflow: hidden;
+        transition: 0.45s ease;
+      }
+      .img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px #00000033;
+      }
+      .img img {
+        display: block;
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 18px;
+        transition: 0.6s ease;
+      }
+      .img:hover img {
+        transform: scale(1.025);
+        filter: saturate(1.08);
+      }
+      p {
+        margin: clamp(24px, 4vw, 35px) 0 clamp(18px, 3vw, 25px);
+        font-size: clamp(20px, 3vw, 28px);
+        color: blue;
+        font-family: "Rancho", cursive;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+      }
+
+      .video-card {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(14px, 2.2vw, 24px);
+        padding: clamp(14px, 2.5vw, 24px);
+        border-radius: 28px;
+        background: linear-gradient(135deg, #bcffeab3, #ffffff80);
+        border: 1px solid #ffffffcc;
+        box-shadow:
+          0 18px 45px #0000001f,
+          inset 0 1px 0 #ffffffcc;
+        backdrop-filter: blur(12px);
+      }
+      .video-item {
+        min-width: 0;
+        padding: 8px;
+        border-radius: 22px;
+        background: #ffffff9e;
+        border: 1px solid #ffffffd1;
+        box-shadow: 0 10px 25px #00000021;
+        overflow: hidden;
+        transition:
+          transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.45s ease;
+      }
+      .video-item:hover {
+        transform: translateY(-8px) scale(1.025);
+        box-shadow: 0 22px 42px #00000033;
+      }
+      .video-item video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 16px;
+        background: #0f172a;
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+      }
+      .video-item:hover video {
+        transform: scale(1.025);
+        filter: saturate(1.08);
+      }
+      .video-label {
+        padding: 10px 5px 5px;
+        color: var(--deep);
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(16px, 2vw, 19px);
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+      .btn {
+        grid-column: 1/-1;
+        justify-self: center;
+        min-width: 190px;
+        margin-top: 3px;
+        padding: 11px 28px;
+        background: linear-gradient(135deg, #b11271, #8f0b5a);
+        border: 0;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 10px 25px #b1127140;
+        transition: 0.3s ease;
+      }
+      .btn a {
+        color: white;
+        text-decoration: none;
+        font-size: clamp(18px, 2.5vw, 22px);
+        font-family: "Instrument Serif", serif;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+      .btn:hover {
+        background: linear-gradient(135deg, #0b3019, #14532d);
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 16px 32px #0b301940;
+      }
+      .btn:active {
+        transform: scale(0.98);
+      }
+      @keyframes pageIn {
+        from {
+          opacity: 0;
+          transform: translateY(25px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes float {
+        from {
+          transform: translate(0, 0) scale(1);
+        }
+        to {
+          transform: translate(25px, 20px) scale(1.08);
+        }
+      }
+      @media (max-width: 850px) {
+        body {
+          padding: 18px 12px;
+        }
+        .main {
+          min-height: auto;
+          padding: 28px 20px 32px;
+        }
+        .video-card {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .video-item:last-of-type {
+          grid-column: 1/-1;
+          width: min(100%, 420px);
+          justify-self: center;
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px 7px;
+        }
+        .main {
+          padding: 22px 12px 28px;
+          border-radius: 20px;
+        }
+        .main:hover {
+          transform: none;
+        }
+        h3 {
+          font-size: clamp(22px, 7vw, 28px);
+          letter-spacing: 1px;
+        }
+        h3:hover {
+          letter-spacing: 2px;
+        }
+        .img {
+          border-radius: 19px;
+        }
+        .img img {
+          max-height: 280px;
+          border-radius: 14px;
+        }
+        p {
+          font-size: 19px;
+          line-height: 1.4;
+          letter-spacing: 1px;
+        }
+        .video-card {
+          grid-template-columns: 1fr;
+          padding: 11px;
+          gap: 15px;
+          border-radius: 22px;
+        }
+        .video-item,
+        .video-item:last-of-type {
+          grid-column: auto;
+          width: 100%;
+          padding: 7px;
+          border-radius: 19px;
+        }
+        .video-item:hover {
+          transform: translateY(-4px) scale(1.01);
+        }
+        .video-item video {
+          aspect-ratio: 16/10;
+          border-radius: 14px;
+        }
+        .video-label {
+          font-size: 16px;
+        }
+        .btn {
+          min-width: 175px;
+          padding: 10px 22px;
+        }
+      }
+      @media (max-width: 360px) {
+        .main {
+          padding: 18px 9px 24px;
+        }
+        h3 {
+          font-size: 21px;
+        }
+        p {
+          font-size: 17px;
+        }
+        .video-card {
+          padding: 8px;
+        }
+        .video-item {
+          padding: 6px;
+        }
+        .video-item video {
+          aspect-ratio: 16/11;
+        }
+        .video-label {
+          font-size: 14px;
+        }
+      }
+      @media (hover: none) {
+        .main:hover,
+        .img:hover,
+        .video-item:hover,
+        .btn:hover {
+          transform: none;
+        }
+        .img:hover img,
+        .video-item:hover video {
+          transform: none;
+        }
+      }
+
+      /* Footer */
+      .footer {
+        width: 100%;
+        margin-top: clamp(22px, 4vw, 35px);
+        padding: 16px 20px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.48);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow:
+          0 10px 25px rgba(0, 0, 0, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        text-align: center;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .footer:hover {
+        transform: translateY(-3px);
+        box-shadow:
+          0 16px 32px rgba(0, 0, 0, 0.13),
+          inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      }
+
+      .footer p {
+        margin: 0;
+        font-family: "Instrument Serif", serif;
+        font-size: clamp(13px, 1.7vw, 16px);
+        line-height: 1.5;
+        color: #0747ad;
+        text-transform: none;
+        letter-spacing: 0.5px;
+      }
+
+      .footer .developer {
+        color: var(--pink);
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition:
+          color 0.3s ease,
+          letter-spacing 0.3s ease;
+      }
+
+      .footer:hover .developer {
+        color: var(--deep);
+        letter-spacing: 1.5px;
+      }
+
+      @media (max-width: 600px) {
+        .footer {
+          margin-top: 20px;
+          padding: 13px 12px;
+          border-radius: 15px;
+        }
+
+        .footer p {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .footer {
+          padding: 11px 8px;
+        }
+
+        .footer p {
+          font-size: 11px;
+        }
+      }
+
+      @media (hover: none) {
+        .footer:hover {
+          transform: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h3>BCA Department(Behind the project)</h3>
+      <div class="img">
+        <img src="end_pic/bca pic.png" alt="BCA Department" />
+      </div>
+      <p>Memory of BCA Department</p>
+      <p class="newp">
+        Dear BCA 1st Semester, Your drawings, flower garlands, decorations,
+        cutting, and creative ideas truly inspired us. We, the BCA 3rd Semester
+        students, turned your creativity into a website so that your hard work
+        and talent remain as a digital memory. Your creativity + our coding,
+        designing, and teamwork = one beautiful memory for all of us. ❤️
+      </p>
+      <div class="video-card">
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">BCA 1st sem</div>
+        </div>
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">Website Developed by 3rd Semester</div>
+        </div>
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">Work of BCA 1st Semester</div>
+        </div>
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID5.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">
+            The Unity between BCA 1st sem and 3rd sem
+          </div>
+        </div>
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">
+            The Unity between BCA 1st sem and 3rd sem
+          </div>
+        </div>
+        <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID6.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">
+             Bca 1st Sem (Artist:Sayantan Bera)
+          </div>
+          </div>
+           <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID7.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">
+            Bca 1st Sem (Artist:Sayantan Bera)
+          </div>
+           </div>
+           <div class="video-item">
+          <video autoplay loop muted playsinline>
+            <source src="VIDEOS/VID8.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-label">
+           BCA 1st Sem (Arpita Maity, Shyamali Maity, Puja Sing)
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>
+          © 2026 BCA Department • All Rights Reserved •
+          <span class="developer">Developed by BCA 3rd Semester</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
